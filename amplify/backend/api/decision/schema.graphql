@@ -1,0 +1,6 @@
+type Decision @model {
+  id: ID!
+  decision: String!
+  size: String!
+  checkDate: AWSDate!
+}

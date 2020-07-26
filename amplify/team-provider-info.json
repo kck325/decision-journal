@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-decisionjournal-dev-04155-authRole",
+            "UnauthRoleArn": "arn:aws:iam::858987875867:role/amplify-decisionjournal-dev-04155-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::858987875867:role/amplify-decisionjournal-dev-04155-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-decisionjournal-dev-04155-deployment",
+            "UnauthRoleName": "amplify-decisionjournal-dev-04155-unauthRole",
+            "StackName": "amplify-decisionjournal-dev-04155",
+            "StackId": "arn:aws:cloudformation:us-west-2:858987875867:stack/amplify-decisionjournal-dev-04155/7b600500-cf13-11ea-96a7-0651c45e58ae",
+            "AmplifyAppId": "d2cbjc6wp2kby6"
+        },
+        "categories": {
+            "auth": {
+                "decisionjournalabc688d8": {}
+            }
+        }
+    }
+}
