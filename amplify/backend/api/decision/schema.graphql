@@ -3,4 +3,6 @@ type Decision @model {
   decision: String!
   size: String!
   checkDate: AWSDate!
+  decisionScore: Int
+  decisionNotes: String
 }

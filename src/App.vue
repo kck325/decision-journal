@@ -2,14 +2,23 @@
   <amplify-authenticator>
   <div id="app">
       <h1>Decision Journal</h1>
-      <input type="text" v-model="decision" placeholder="Decision taken">
-      <input type="text" v-model="size" placeholder="medium">
-      <input type="date" v-model="checkDate" placeholder="date">
-      <button v-on:click="createDecision">Create Decision</button>
+      <b-container fluid>
+        <b-row class="my-1">
+          <b-col sm="9">
+            <b-form-textarea v-model="decision" placeholder="Decision taken" rows="3"></b-form-textarea>
+          </b-col>
+        </b-row>
+        <b-row class="my-1">
+          <b-col sm="3"><b-form-select v-model="size" :options="decision_sizes"></b-form-select></b-col>
+          <b-col sm="3"><b-form-datepicker v-model="checkDate" placeholder="date"></b-form-datepicker></b-col>
+          <b-col sm="3"><b-button pill variant="success" v-on:click="createDecision">Create Decision</b-button></b-col>
+        </b-row>
+      </b-container>
     </div>
-    <ul v-for="decision in decisions" :key="decision.id">
-      <li>{{ decision.decision}}</li>
-    </ul>
+    <div>
+      <b-table striped hover :items="decisions" :fields="headers">
+      </b-table>
+    </div>
     <amplify-sign-out></amplify-sign-out>
   </amplify-authenticator>
 </template>
@@ -29,9 +38,16 @@ export default {
   data() {
     return {
       decision: '',
-      size: '',
+      size: 'small',
       checkDate: '',
-      decisions: []
+      decisions: [],
+      headers: ["decision", "size", "checkDate", "deicsionScore"],
+      decision_sizes: [
+        { value: 'trivial', text: 'Trivial'},
+        { value: 'small', text: 'Material'},
+        { value: 'medium', text: 'Significant'},
+        { value: 'large', text: 'Life changing'},
+      ]
     }
   },
   methods: {

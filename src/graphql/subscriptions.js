@@ -8,6 +8,8 @@ export const onCreateDecision = /* GraphQL */ `
       decision
       size
       checkDate
+      decisionScore
+      decisionNotes
       createdAt
       updatedAt
     }
@@ -20,6 +22,8 @@ export const onUpdateDecision = /* GraphQL */ `
       decision
       size
       checkDate
+      decisionScore
+      decisionNotes
       createdAt
       updatedAt
     }
@@ -32,6 +36,8 @@ export const onDeleteDecision = /* GraphQL */ `
       decision
       size
       checkDate
+      decisionScore
+      decisionNotes
       createdAt
       updatedAt
     }

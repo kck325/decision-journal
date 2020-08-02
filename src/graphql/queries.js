@@ -8,6 +8,8 @@ export const getDecision = /* GraphQL */ `
       decision
       size
       checkDate
+      decisionScore
+      decisionNotes
       createdAt
       updatedAt
     }
@@ -25,6 +27,8 @@ export const listDecisions = /* GraphQL */ `
         decision
         size
         checkDate
+        decisionScore
+        decisionNotes
         createdAt
         updatedAt
       }
